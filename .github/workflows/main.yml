@@ -11,11 +11,11 @@ jobs:
     steps:
     - name: Downloading Ngrok.
       run: |
-        Invoke-WebRequest https://raw.githubusercontent.com/thorrevenge/test-rdp/main/resources/ngrok.zip -OutFile ngrok.zip
+        Invoke-WebRequest https://raw.githubusercontent.com/thorrevenge/test-rdp/main/ngrok.zip -OutFile ngrok.zip
         Invoke-WebRequest https://raw.githubusercontent.com/thorrevenge/test-rdp/main/start.bat -OutFile start.bat
         Invoke-WebRequest https://raw.githubusercontent.com/thorrevenge/test-rdp/main/wallpaper.jpg -OutFile wallpaper.jpg
         Invoke-WebRequest https://raw.githubusercontent.com/thorrevenge/test-rdp/main/wallpaper.bat -OutFile wallpaper.bat
-        Invoke-WebRequest https://raw.githubusercontent.com/thorrevenge/test-rdp/main/resources/winrar.exe -OutFile winrar.exe
+        Invoke-WebRequest https://raw.githubusercontent.com/thorrevenge/test-rdp/main/winrar.exe -OutFile winrar.exe
     - name: Extracting Ngrok Files.
       run: Expand-Archive ngrok.zip
     - name: Connecting to your Ngrok account.
