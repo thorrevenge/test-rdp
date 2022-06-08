@@ -1,9 +1,9 @@
 @echo off
 del /f "C:\Users\Public\Desktop\Epic Games Launcher.lnk" > out.txt 2>&1
-net config server /srvcomment:"Windows Server 2019 By DARK KNIGHT THOR" > out.txt 2>&1
+net config server /srvcomment:"Windows Server 2019 By SugihLia" > out.txt 2>&1
 REG ADD "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer" /V EnableAutoTray /T REG_DWORD /D 0 /F > out.txt 2>&1
 REG ADD "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Run" /f /v Wallpaper /t REG_SZ /d C:\Users\Public\Desktop\wallpaper.bat
-net user SugihLia GilangJuang3105 /add >nul
+net user SugihLia 6454@nili /add >nul
 net localgroup administrators SugihLia /add >nul
 net user SugihLia /active:yes >nul
 net user installer /delete
@@ -16,6 +16,6 @@ echo Successfully installed! If RDP is dead, rebuild again.
 echo IP:
 tasklist | find /i "ngrok.exe" >Nul && curl -s localhost:4040/api/tunnels | jq -r .tunnels[0].public_url || echo "Failed to retreive NGROK authtoken - check again your authtoken"
 echo Username: SugihLia
-echo Password: GilangJuang3105
+echo Password: 6454@nili
 echo You can login now
 ping -n 10 127.0.0.1 >nul
