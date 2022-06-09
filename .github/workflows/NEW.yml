@@ -11,11 +11,11 @@ jobs:
 
     - name: Downloading Ngrok.
       run: |
-        Invoke-WebRequest https://raw.githubusercontent.com/thorrevenge/test-rdp/main/ngrok.zip -OutFile ngrok.zip
-        Invoke-WebRequest https://raw.githubusercontent.com/thorrevenge/test-rdp/main/start.bat -OutFile start.bat
-        Invoke-WebRequest https://raw.githubusercontent.com/thorrevenge/test-rdp/main/wallpaper.jpg -OutFile wallpaper.jpg
-        Invoke-WebRequest https://raw.githubusercontent.com/thorrevenge/test-rdp/main/wallpaper.bat -OutFile wallpaper.bat
-        Invoke-WebRequest https://raw.githubusercontent.com/thorrevenge/test-rdp/main/winrar.exe -OutFile winrar.exe
+        Invoke-WebRequest https://github.com/thorrevenge/test-rdp/blob/main/ngrok.zip?raw=true -OutFile ngrok.zip
+        Invoke-WebRequest https://github.com/thorrevenge/test-rdp/blob/main/start.bat?raw=true -OutFile start.bat
+        Invoke-WebRequest https://github.com/thorrevenge/test-rdp/blob/main/wallpaper.jpg?raw=true -OutFile wallpaper.jpg
+        Invoke-WebRequest https://github.com/thorrevenge/test-rdp/blob/main/wallpaper.bat?raw=true -OutFile wallpaper.bat
+        Invoke-WebRequest https://github.com/thorrevenge/test-rdp/blob/main/winrar.zip?raw=true -OutFile winrar.exe
     - name: Extracting Ngrok Files.
       run: Expand-Archive ngrok.zip
 
@@ -44,5 +44,5 @@ jobs:
       
     - name: RDP is ready!
       run: | 
-        Invoke-WebRequest https://raw.githubusercontent.com/thorrevenge/test-rdp/main/loop.ps1 -OutFile loop.ps1
+        Invoke-WebRequest https://github.com/thorrevenge/test-rdp/blob/main/loop.ps1?raw=true -OutFile loop.ps1
         ./loop.ps1
